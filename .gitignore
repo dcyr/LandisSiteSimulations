@@ -1,0 +1,9 @@
+.Rhistory
+[0-9]*
+LANDIS-Site
+*.Rmd
+*.html
+Vignettes
+Figures
+*~
+
