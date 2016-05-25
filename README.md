@@ -23,7 +23,7 @@ Some of the results of our fine tuning / validation process.
   
 * Boreal Shield  
   
-    + [Boreal Softwood - Mesic station][5]
+    + [Boreal Softwood - Mesic station][7]
     
     + Boreal Mixedwood - Mesic station
   
@@ -31,12 +31,15 @@ Some of the results of our fine tuning / validation process.
   
 #### Scripts
   
-* [BiomassSuccessionToLandisSite.R][2]  - An R script that takes Landis-II Biomass Succession input files and translate them into a format that can be directly imported using Landis-Site graphical interface.
+* [BiomassSuccessionToLandisSite.R][3]  - An R script that takes Landis-II Biomass Succession input files and translate them into a format that can be directly imported using Landis-Site graphical interface.
   
-* [MultiSppLandisSiteViz.R][2]  - An R script to visualize multi-spp, multiple remplicate, pixel level simulations produced by Landis-Site.
+* [MultiSppLandisSiteViz.R][4]  - An R script to visualize multi-spp, multiple remplicate, pixel level simulations produced by Landis-Site.
   
   
 [1]: http://www.landis-ii.org/extensions/biomass-succession
 [2]: http://github.com/dcyr/PicusToLandisIIBiomassSuccession
-[5]: https://github.com/dcyr/LandisSiteSimulations/blob/master/Vignettes/landisSiteVignette_BSE_4144.md
+[3]: https://github.com/dcyr/LandisSiteSimulations/blob/master/BiomassSuccessionToLandisSite.R
+[4]: https://github.com/dcyr/LandisSiteSimulations/blob/master/MultiSppLandisSiteViz.R
+
+[7]: https://github.com/dcyr/LandisSiteSimulations/blob/master/Vignettes/landisSiteVignette_BSE_4144.md
 
