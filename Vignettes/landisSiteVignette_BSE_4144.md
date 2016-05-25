@@ -1,4 +1,4 @@
-# LANDIS-II Biomass Succession pixel-level simulations: Boreal Shield East - Softwood Boreal
+# Boreal Shield East - Softwood Boreal
 Dominic Cyr  
 Updated on May 25 2016
 
@@ -41,7 +41,7 @@ For that type of ecosystem, the following species were included.
 4. Trembling Aspen (POPU.TRE)
 5. Red Maple (ACER.RUB)
 6. Yellow Birch (BETU.ALL)
-
+  
 
 * In the figure below, note that some panels present average values AND enveloppes, while others only present average values.
 
