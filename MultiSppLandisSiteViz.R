@@ -53,7 +53,7 @@ i <- 1
 for (l in landtypes) {
     folder <- paste(multiSppOutputs, l, sep="/")
     x <- list.files(folder)
-    info <- x[grep("spp.txt", x)]
+    info <- x[grep("spp.txt", x)][1]
     x <- x[-grep(info, x)]
     info <- readLines(paste(folder, info, sep="/"))
     describ <- info[1]
@@ -130,16 +130,19 @@ for (l in unique(sppOutputsLandisSites$landtype)){
     title <- unique(df$describ)
     replicateN <- length(unique(df$replicate))
     spp <- levels(df$species)
-    colors <- as.character(vegCodes[match(spp, vegCodes$LandisCode), "color"])
+    cols <- as.character(vegCodes[match(spp, vegCodes$LandisCode), "color"])
 
     shadeDf <- filter(standOutputsLandisSites, variable == "PctShade", landtype == l )
     shadeThresh <- c(0, 20, 40, 50, 70, 90)
+    shadeSeg <- data.frame(x = 0, xend = max(shadeDf$Year), y = shadeThresh[-1], yend = shadeThresh[-1])
 
     ### Absolute abundance
-    linePlot <- ggplot(df, aes(x=Year, y=AGBiomass_tonsPerHa, colour=species)) +
-        geom_line(size=0.3, alpha = 0.4,  group = df$simID) +
-        stat_summary(fun.y="mean", geom="line", size = 0.5) +
-        scale_colour_manual(values=colors) +
+    linePlot <- ggplot(df, aes(x = Year, y = AGBiomass_tonsPerHa, colour = species)) +
+        #geom_line(size=0.3, alpha = 0.4,  aes(group = df$simID)) +
+        #stat_summary(fun.data ="mean_sdl", geom = "smooth", aes(fill = species)) +
+        stat_summary(fun.y="range", geom="line", size = 0.5, alpha = 0.4) +
+        stat_summary(fun.y="mean", geom="line", size = 0.5, alpha = 1) +
+        scale_colour_manual(values = cols) +
         guides(fill = guide_legend(reverse = TRUE)) +
         labs(title="Absolute abundance",
              y="Aboveground biomass\n(t/ha)\n",
@@ -149,7 +152,7 @@ for (l in unique(sppOutputsLandisSites$landtype)){
         stat_summary(fun.y="mean", geom="area", position = "stack",
                      color = "black", size = 0.3) +
         #geom_area(colour="black", size=0.2) +
-        scale_fill_manual(values =colors) +
+        scale_fill_manual(values = cols) +
         guides(fill = guide_legend(reverse = TRUE)) +
         labs(title = "Cumulative abundance (average)",
              y = "Aboveground biomass\n(t/ha)\n",
@@ -160,27 +163,28 @@ for (l in unique(sppOutputsLandisSites$landtype)){
         stat_summary(fun.y="mean", geom="area", position = "fill",
                      color = "black", size = 0.3) +
         #geom_area(position="fill", col="black") +
-        scale_fill_manual(values =colors) +
+        scale_fill_manual(values = cols) +
         guides(fill = guide_legend(reverse = TRUE)) +
         labs(title="Proportions (average)",
              y="Proportion of aboveground biomass\n\n",
              x="Year")
     ### Structural complexity
-    cohortPlot <-    ggplot(df, aes(x=Year, y=numCohorts, colour=species)) +
-        geom_line(size=0.3, alpha = 0.4,  group = df$simID) +
-        stat_summary(fun.y="mean", geom="line", size = 0.5) +
-        scale_colour_manual(values=colors) +
+    cohortPlot <- ggplot(df, aes(x=Year, y=numCohorts, colour = species)) +
+        #geom_line(size=0.3, alpha = 0.4,  aes(group = df$simID)) +
+        stat_summary(fun.y="mean", geom="smooth", size = 0.5) +
+        stat_summary(fun.y="range", geom="line", alpha =  0.4) +
+        scale_colour_manual(values = cols) +
         guides(fill = guide_legend(reverse = TRUE)) +
         labs(title="Structural complexity",
              y="Number of cohorts\n\n",
              x="Year")
     ### Shade classes
-    shadePlot <- ggplot(shadeDf, aes(x=Year, y=value)) +
-        geom_line(size=0.3, alpha = 0.4,  group = replicate) +
+    shadePlot <- ggplot(data = shadeDf, aes(x=Year, y=value)) +
+        #geom_line(size=0.3, alpha = 0.4,  aes(group = replicate)) +
         stat_summary(fun.y="mean", geom="line", size = 0.5) +
-        geom_segment(aes(x = 0, y = shadeThresh[-1],
-                         xend = max(shadeDf$Year), yend = shadeThresh[-1]),
-                     linetype = 3, size = 0.25) +
+        stat_summary(fun.y="range", geom="line", size = 0.5, alpha = 0.4) +
+        geom_segment(data = shadeSeg, aes(x = shadeSeg$x, y = shadeSeg$y, xend = shadeSeg$xend, yend = shadeSeg$yend),
+                      linetype = 3, size = 0.25) +
         annotate("text", label = paste0("ShadeClass", c(0:5)),
                  x = 1000, y = shadeThresh + 2,
                  hjust = 1, vjust = 0,
