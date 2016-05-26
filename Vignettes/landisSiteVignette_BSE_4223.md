@@ -1,4 +1,4 @@
-# Boreal Shield East - Softwood Boreal
+# Boreal Shield East - Mixedwood Boreal
 Dominic Cyr  
 Updated on May 26 2016
 
@@ -26,11 +26,11 @@ We use such pixel-level simulation to assess the realism of emerging succession 
 
 
 
-<img src="landisSiteVignette_BSE_4144_files/figure-html/mapPlot-1.png"  />
+<img src="landisSiteVignette_BSE_4223_files/figure-html/mapPlot-1.png"  />
 
 -------
 
-### Boreal Shield East - Mesic Softwood Boreal 
+### Boreal Shield East - Mesic Mixedwood Boreal 
 
 
 * In the figure below, note that some panels present average values AND enveloppes, while others only present average values.
@@ -58,7 +58,7 @@ We use such pixel-level simulation to assess the realism of emerging succession 
 -------
 
 ### Pixel-level simulation results
-![](../Figures/multiSppLandisSite_BSE_4144.png)
+![](../Figures/multiSppLandisSite_BSE_4223.png)
 
 
 
