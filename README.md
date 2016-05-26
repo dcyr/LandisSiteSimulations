@@ -1,6 +1,6 @@
 # LANDIS-II Biomass Succession pixel-level simulations
 Dominic Cyr  
-Updated on May 25 2016
+Updated on May 26 2016
 
 -------
 
@@ -25,7 +25,9 @@ Some of the results of our fine tuning / validation process.
   
     + [Boreal Softwood - Mesic station][7]
     
-    + Boreal Mixedwood - Mesic station
+    + [Boreal Mixedwood - Mesic station][8]
+    
+    + [Temperate Hardwood - Mesic station][9]
   
 * Boreal Plains  
   
@@ -42,4 +44,6 @@ Some of the results of our fine tuning / validation process.
 [4]: https://github.com/dcyr/LandisSiteSimulations/blob/master/MultiSppLandisSiteViz.R
 
 [7]: https://github.com/dcyr/LandisSiteSimulations/blob/master/Vignettes/landisSiteVignette_BSE_4144.md
+[8]: https://github.com/dcyr/LandisSiteSimulations/blob/master/Vignettes/landisSiteVignette_BSE_4223.md
+[9]: https://github.com/dcyr/LandisSiteSimulations/blob/master/Vignettes/landisSiteVignette_BSE_4233.md
 
