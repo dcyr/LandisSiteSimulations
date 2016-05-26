@@ -57,8 +57,8 @@ for (l in landtypes) {
     x <- x[-grep(info, x)]
     info <- readLines(paste(folder, info, sep="/"))
     describ <- info[1]
-    maxB <- as.numeric(info[(length(info)-1)])
-    sppCode <- info[c(2:(length(info)-2))]
+    maxB <- as.numeric(info[(length(info))])
+    sppCode <- info[c(2:(length(info)-1))]
     sppName <- as.character(vegCodes[match(sppCode, vegCodes$LandisCode),"scientificShort"])
 
     for (r in seq_along(x)) {
