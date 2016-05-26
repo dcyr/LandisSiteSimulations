@@ -25,7 +25,7 @@ Some of the results of our fine tuning / validation process.
   
     + [Boreal Softwood - Mesic station][7]
     
-    + [Boreal Mixedwood - Mesic station][8]
+    + [Temperate Mixedwood - Mesic station][8]
     
     + [Temperate Hardwood - Mesic station][9]
   
