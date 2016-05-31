@@ -4,7 +4,7 @@ rm(list=ls())
 setwd("~/Travail/SCF/Landis/LandisGrowthCalib")
 ### user defined variables (could be used as argument for this script, slight modif needed,
 ### or, a loop could be built around it
-a <- "BSE"
+a <- "AM"
 ###
 LandisSiteOutputDir <- paste0(getwd(), "/LANDIS-Site/outputs")
 

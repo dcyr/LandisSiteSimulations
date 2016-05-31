@@ -1,6 +1,6 @@
 # Boreal Shield East - Softwood Boreal
 Dominic Cyr  
-Updated on May 26 2016
+Updated on May 31 2016
 
 -------
 
@@ -30,7 +30,7 @@ We use such pixel-level simulation to assess the realism of emerging succession 
 
 -------
 
-### Boreal Shield East - Mesic Softwood Boreal 
+### Eastern Boreal Shield - Mesic Softwood Boreal 
 
 
 * In the figure below, note that some panels present average values AND enveloppes, while others only present average values.
