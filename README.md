@@ -1,6 +1,6 @@
 # LANDIS-II Biomass Succession pixel-level simulations
 Dominic Cyr  
-Updated on May 31 2016
+Updated on Jun 01 2016
 
 -------
 
@@ -8,12 +8,11 @@ Updated on May 31 2016
 
 In this repository you can find some scripts and information about how we tuned and verified the pixel-level successionnal patterns that emerged from [_LANDIS-II Biomass Succession_][1].
 
-While some of the most important parameters were derived from stand-level model PICUS ([more information here][2]), some of the parameters were set through a more subjective process that we want to make as transparent as possible by sharing it here. However, the procedure remains subjective and imperfect, and we encourage anyone who has questions, comments, or suggestions, to contact us so that we can see how it can be improved.
+While some of the most important parameters were derived from stand-level model PICUS ([more information here][2]), some of the parameters were set through a more subjective process that we want to make as transparent as possible by sharing it here. However, the procedure remains perfectible, and we encourage anyone who has questions, comments, or suggestions, to contact us so that we can see how it can be improved.
 
-
-### LANDIS-site vignettes
+### Vignettes
   
-Some of the results of our fine tuning / validation process.
+Some landtype-specific results and more information about our tuning / validation process.
 
 * Atlantic Maritimes  
   
@@ -29,12 +28,11 @@ Some of the results of our fine tuning / validation process.
     
     + [Temperate Hardwood - Mesic station][9]
   
-* Boreal Plains  
-    + [Boreal Plains - Lowland][10]
+* Boreal Plains
     
-    + [Boreal Plains - Upland][11]
+    + [Lowland][10]
     
-  
+    + [Upland][11]
   
 ### Scripts
   
