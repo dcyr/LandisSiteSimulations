@@ -1,6 +1,6 @@
 # Boreal Shield East - Softwood Boreal
 Dominic Cyr  
-Updated on May 31 2016
+Updated on Jun 01 2016
 
 -------
 
@@ -123,7 +123,7 @@ __ShadeTolerance__ is also a relatively well documented aspect of the autoecolog
 
 Finally, we had to set two shape parameters: the __mortalityShape__ and the __growthShape__ parameters. Because they are subjective and abstract, they were set at the very end. Mortality shape revealed critical in determining how much of a given species cohorts persist when approaching their maximum longevity, while growth shape parameter determines in large part the extent and speed at which newly established cohorts could fill in the growing space made available after some other cohorts were affected by mortality.
 
-In order to simplify the processe and minimize the level of subjectively involved in the process of manually setting these parameters for each species, two groups of species were created, within which the same values were attributed: short lived (<= 150 years) and long lived (> 150 years) species. This is based on the observation that the growth of short-lived species generally takes off more rapidly than that of long-lived species, and that their mortality occur in a more condensed portion of their lifes, nearer the end of their maximum longevity than long-lived species.
+In order to simplify the process of manually setting these parameters for each species as well as to minimize the level of subjectively involved, two groups of species were created, within which the same values were attributed: short lived (<= 150 years) and long lived (> 150 years) species. This is based on the observation that the growth of short-lived species generally takes off more rapidly than that of long-lived species, and that their mortality occur in a more condensed portion of their lives, nearer the end of their maximum longevity than long-lived species.
 
 The growth shape parameter was set to the maximum possible value for long-lived species (1), i.e. that it took a longer time for them to reach their maximum growth potential, while short-lived species were attributed the smallest value possible (0), so that they reach their growth reach their maximum growth instantly. We found that this rule was simple enough to be justifiable using basic and easily described assumptions. More importantly, it allowed for a plausible level of species coexistence in undisturbed/steady-state stands, as well as a plausible increase in opportunistic species after partial disturbances (not shown here).
 
