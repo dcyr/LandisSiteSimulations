@@ -4,7 +4,7 @@ rm(list=ls())
 setwd("~/Travail/SCF/Landis/LandisGrowthCalib")
 ### user defined variables (could be used as argument for this script, slight modif needed,
 ### or, a loop could be built around it
-a <- "AM"
+a <- "LSJ"
 ###
 LandisSiteOutputDir <- paste0(getwd(), "/LANDIS-Site/outputs")
 
@@ -143,7 +143,7 @@ for (l in unique(sppOutputsLandisSites$landtype)){
         stat_summary(fun.y="range", geom="line", size = 0.5, alpha = 0.4) +
         stat_summary(fun.y="mean", geom="line", size = 0.5, alpha = 1) +
         scale_colour_manual(values = cols) +
-        guides(fill = guide_legend(reverse = TRUE)) +
+        guides(fill = guide_legend(reverse = F)) +
         labs(title="Absolute abundance",
              y="Aboveground biomass\n(t/ha)\n",
              x="Year")
@@ -153,7 +153,7 @@ for (l in unique(sppOutputsLandisSites$landtype)){
                      color = "black", size = 0.3) +
         #geom_area(colour="black", size=0.2) +
         scale_fill_manual(values = cols) +
-        guides(fill = guide_legend(reverse = TRUE)) +
+        guides(fill = guide_legend(reverse = F)) +
         labs(title = "Cumulative abundance (average)",
              y = "Aboveground biomass\n(t/ha)\n",
              x = "Year")
@@ -164,7 +164,7 @@ for (l in unique(sppOutputsLandisSites$landtype)){
                      color = "black", size = 0.3) +
         #geom_area(position="fill", col="black") +
         scale_fill_manual(values = cols) +
-        guides(fill = guide_legend(reverse = TRUE)) +
+        guides(fill = guide_legend(reverse = F)) +
         labs(title="Proportions (average)",
              y="Proportion of aboveground biomass\n\n",
              x="Year")
@@ -174,7 +174,7 @@ for (l in unique(sppOutputsLandisSites$landtype)){
         stat_summary(fun.y="mean", geom="smooth", size = 0.5) +
         stat_summary(fun.y="range", geom="line", alpha =  0.4) +
         scale_colour_manual(values = cols) +
-        guides(fill = guide_legend(reverse = TRUE)) +
+        guides(fill = guide_legend(reverse = F)) +
         labs(title="Structural complexity",
              y="Number of cohorts\n\n",
              x="Year")

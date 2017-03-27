@@ -5,6 +5,7 @@
 temp
 *~
 Vignettes/*cache
-*latex
+*figure-latex
+*figure-docx
 *.rds
 *.html

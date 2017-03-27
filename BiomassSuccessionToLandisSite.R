@@ -17,7 +17,7 @@ setwd(wwd)
 rm(wwd)
 
 ### area
-a <- "AM"
+a <- "LSJ"
 
 
 ### 'vegCodes' is the species master list
@@ -53,7 +53,7 @@ for (sp in spp) { # sp <-spp[1]
 
 ###########
 #### fetching dynamic inputs (baseline only)
-DynamicInputs <- read.table(paste0(LandisInputsDir, "/", a, "/biomass-succession-dynamic-inputs_", a, "_Baseline.txt"), skip=1, blank.lines.skip=T, comment.char=">")
+DynamicInputs <- read.table(paste0(LandisInputsDir, "/", a, "/biomass-succession-dynamic-inputs_", a, "_Baseline_5yrsTS.txt"), skip=1, blank.lines.skip=T, comment.char=">")
 colnames(DynamicInputs) <- c("year", "ecoregion", "species", "probEst", "MaxANPP", "MaxB")
 ###########
 
@@ -81,7 +81,6 @@ for (y in unique(DynamicInputs$year))	{#  y<-0
 	}
 }
 ####
-
 
 
 
