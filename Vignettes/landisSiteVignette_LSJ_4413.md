@@ -1,6 +1,6 @@
-# Lac Saint-Jean - Mixedwood Boreal (mesic)
+# Lac Saint-Jean - Softwood Boreal (mesic)
 Dominic Cyr  
-Updated on Mar 27 2017
+Updated on Mar 28 2017
 
 -------
 
@@ -35,7 +35,7 @@ We use such pixel-level simulation to assess the realism of emerging succession 
 
 -------
 
-### Lac Saint-Jean - Mixedwood Boreal (mesic) 
+### Lac Saint-Jean - Softwood Boreal (mesic) 
 
 
 * In the figure below, note that some panels present average values AND enveloppes, while others only present average values.
